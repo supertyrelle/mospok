@@ -160,6 +160,7 @@ body {
   background: -webkit-linear-gradient(-45deg, #3a57b7, #512da8);
   background: linear-gradient(-45deg, #3a57b7, #512da8, #f4aa3c);
   background-size: 400% 400%;
+  background-repeat: no-repeat;
   animation: gradientBG 15s ease-in-out infinite;
 }
 
@@ -175,10 +176,13 @@ body {
   }
 }
 h1 {
-  font-size: 62pt;
+  font-size: 60pt;
   margin: 0;
 }
 
+.glide {
+  margin-top: 1em;
+}
 .glide h1 {
   position: relative;
   display: inline;
@@ -196,7 +200,7 @@ h1 {
 
 .feat-butt {
   position: relative;
-  padding-right: 3em;
+  padding-right: 1.5em;
   overflow: hidden;
   z-index: 2;
   transition: 200ms;
@@ -225,7 +229,7 @@ h1 {
   height: 100%;
   width: 100%;
   align-self: stretch;
-  transform: translateX(81%);
+  transform: translateX(87%);
   z-index: 0;
 }
 .feat-butt:hover {
@@ -303,6 +307,7 @@ header nav + nav {
 
 .glide {
   cursor: grab;
+  position: relative;
 }
 .glide:active {
   cursor: grabbing;
@@ -335,10 +340,38 @@ header nav + nav {
 }
 .glide__slide .illustration img {
   width: 100%;
+  pointer-events: none;
 }
 .glide__arrows {
   right: 0px;
   position: absolute;
+}
+.glide__arrows .prev,
+.glide__arrows .next {
+  background: rgba(252, 252, 252, 0.8);
+  transition: ease all 230ms;
+}
+.glide__arrows .prev:hover,
+.glide__arrows .next:hover {
+  background: #fcfcfc;
+}
+.glide__arrows .next {
+  margin-left: 0.5rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  padding: 2rem;
+}
+footer a,
+footer p {
+  display: inline;
+  color: rgba(252, 252, 252, 0.6);
+  text-decoration: none;
+}
+footer a {
+  margin-left: 1rem;
 }
 
 /*# sourceMappingURL=/style.ff1c4cab.css.map */

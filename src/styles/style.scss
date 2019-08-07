@@ -77,6 +77,7 @@ header {
 
 .glide {
     cursor: grab;
+    position: relative;
 
     &:active {
         cursor: grabbing;
@@ -100,6 +101,7 @@ header {
             padding: 2rem;
 
             h6 {
+                // display: none;
                 margin: 0;
                 font-size: 20pt;
                 font-weight: 300;
@@ -125,6 +127,8 @@ header {
 
             img {
                 width: 100%;
+                pointer-events: none;
+                // mix-blend-mode: hard-light ;
             }
         }
 
@@ -133,5 +137,36 @@ header {
     &__arrows {
         right: 0px;
         position: absolute;
+
+        .prev,
+        .next {
+            background: rgba($white, 80%);
+            transition: ease all 230ms;
+
+            &:hover {
+                background: $white;
+            }
+        }
+
+        .next {
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    padding: 2rem;
+
+    a,
+    p {
+        display: inline;
+        color: rgba($white, 60%);
+        text-decoration: none;
+    }
+
+    a {
+        margin-left: 1rem;
     }
 }
