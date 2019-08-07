@@ -1,0 +1,137 @@
+@import "tech";
+
+header {
+    padding: 1rem 2rem;
+
+    .logo {
+        font-weight: 900;
+        font-size: 44pt;
+        position: relative;
+        flex: 1;
+
+        &::after {
+            content: '•';
+            font-size: 28pt;
+            line-height: 20pt;
+            color: $primary;
+            position: absolute;
+            top: 0px;
+        }
+    }
+
+    nav {
+        flex: 1;
+
+        a {
+            color: rgba($white, 60%);
+            text-decoration: none;
+            font-size: 18pt;
+            margin-bottom: 10px;
+            position: relative;
+            transition: ease all 230ms;
+
+            &::after {
+                filter: opacity(0);
+                transition: ease filter 230ms;
+
+            }
+
+            &:hover {
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 4px;
+                    position: absolute;
+                    left: 0px;
+                    bottom: -0.6rem;
+                    background: $white;
+                    filter: opacity(1);
+                }
+            }
+
+            &.active {
+                color: $white;
+
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 4px;
+                    position: absolute;
+                    left: 0px;
+                    bottom: -0.6rem;
+                    background: $white;
+                    filter: opacity(1);
+                }
+            }
+
+            &+a {
+                margin-left: 2rem;
+            }
+        }
+
+        &+nav {
+            align-items: flex-end;
+        }
+    }
+}
+
+.glide {
+    cursor: grab;
+
+    &:active {
+        cursor: grabbing;
+    }
+
+    &__slides {
+
+        // width:500px !important;
+    }
+
+    &__slide {
+        // margin:0 10px;
+        // color: lime;
+        // background: blue;
+        height: auto;
+        width: 100%;
+        // border: solid gold 4px;
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+
+            h6 {
+                margin: 0;
+                font-size: 20pt;
+                font-weight: 300;
+                color: rgba($white, 60%);
+                line-height: 12pt;
+                // text-transform: lowercase;
+            }
+
+            p {
+                font-size: 14pt;
+                margin: 0;
+                margin-top: 1em;
+
+            }
+
+            button {
+                margin-top: 1em;
+            }
+        }
+
+        .illustration {
+            flex: 1;
+
+            img {
+                width: 100%;
+            }
+        }
+
+    }
+
+    &__arrows {
+        right: 0px;
+        position: absolute;
+    }
+}

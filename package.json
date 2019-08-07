@@ -1,0 +1,25 @@
+{
+  "name": "mospok",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html --port 444",
+    "pack": "parcel build src/index.html -d export --public-url ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "parcel-plugin-compress": "^1.0.10",
+    "parcel-plugin-imagemin": "^3.0.0",
+    "postcss-modules": "^1.4.1",
+    "sass": "^1.22.9"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.3.0",
+    "aos": "^3.0.0-beta.6",
+    "path": "^0.12.7"
+  }
+}
