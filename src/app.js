@@ -259,4 +259,9 @@ function footerComp() {
     footer.appendChild(footerCont);
 }
 footerComp();
-new Glide('.glide').mount();
+var glide = new Glide('.glide', {
+    autoplay: 7000,
+    hoverpause: true,
+    perView: 1
+})
+glide.mount();

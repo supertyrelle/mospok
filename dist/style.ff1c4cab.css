@@ -161,7 +161,6 @@ body {
   background: linear-gradient(-45deg, #3a57b7, #512da8, #f4aa3c);
   background-size: 400% 400%;
   background-repeat: no-repeat;
-  animation: gradientBG 15s ease-in-out infinite;
 }
 
 @keyframes gradientBG {
@@ -348,12 +347,7 @@ header nav + nav {
 }
 .glide__arrows .prev,
 .glide__arrows .next {
-  background: rgba(252, 252, 252, 0.8);
-  transition: ease all 230ms;
-}
-.glide__arrows .prev:hover,
-.glide__arrows .next:hover {
-  background: #fcfcfc;
+  cursor: pointer;
 }
 .glide__arrows .next {
   margin-left: 0.5rem;
